@@ -1,2 +1,44 @@
+<h3>Система обмена дисками</h3>
 <hr>
-Тестовое задание
+1. Для развертывания сайта необходимо скачать и распаковать архив в корневую папку на хостинге.
+
+2. В конфигурациях сервера прописать путь папке /web, чтобы она стала корнем сайта
+Например: для сервера Apache2 конфигурация выглядит так:
+<hr>
+<VirtualHost *:80>
+    ServerAdmin admin@example.com
+    ServerName mysite.ru
+    ServerAlias www.mysite.ru
+    DocumentRoot /var/www/mysite.ru/web
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+<hr>
+
+3. Импортировать дамп базы данных из файла db.sql
+
+4. В файле /config/db.php указать данные для подключения к базе данных
+Пример:
+<hr>
+return [
+    'class' => 'yii\db\Connection',
+    'dsn' => 'mysql:host=localhost;dbname=имя_базы_данных',
+    'username' => 'имя_пользователя',
+    'password' => 'пароль',
+    'charset' => 'utf8',
+];
+<hr>
+
+5. В файле /web/.htaccess прописать следующее содержимое:
+<hr>
+Options +FollowSymLinks
+IndexIgnore */*
+RewriteEngine on
+
+# if a directory or a file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# otherwise forward it to index.php
+RewriteRule . index.php
+<hr>
