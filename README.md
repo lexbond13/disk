@@ -5,14 +5,14 @@
 2. В конфигурациях сервера прописать путь папке /web, чтобы она стала корнем сайта
 Например: для сервера Apache2 конфигурация выглядит так:
 <hr>
-```html<VirtualHost *:80>
+&lt;VirtualHost *:80&пt;
     ServerAdmin admin@example.com
     ServerName mysite.ru
     ServerAlias www.mysite.ru
     DocumentRoot /var/www/mysite.ru/web
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>```
+&lt;/VirtualHost&пt;
 </pre>
 <hr>
 
