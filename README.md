@@ -5,7 +5,7 @@
 2. В конфигурациях сервера прописать путь папке /web, чтобы она стала корнем сайта
 Например: для сервера Apache2 конфигурация выглядит так:
 <hr>
-<VirtualHost *:80>
+<pre><VirtualHost *:80>
     ServerAdmin admin@example.com
     ServerName mysite.ru
     ServerAlias www.mysite.ru
@@ -13,6 +13,7 @@
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
+</pre>
 <hr>
 
 3. Импортировать дамп базы данных из файла db.sql
