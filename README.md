@@ -5,7 +5,8 @@
 2. В конфигурациях сервера прописать путь папке /web, чтобы она стала корнем сайта
 Например: для сервера Apache2 конфигурация выглядит так:
 <hr>
-&lt;VirtualHost *:80&gt;
+<pre>
+&lt;VirtualHost *:80&gt; 
     ServerAdmin admin@example.com
     ServerName mysite.ru
     ServerAlias www.mysite.ru
