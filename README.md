@@ -21,6 +21,7 @@
 4. В файле /config/db.php указать данные для подключения к базе данных
 Пример:
 <hr>
+<pre>
 return [
     'class' => 'yii\db\Connection',
     'dsn' => 'mysql:host=localhost;dbname=имя_базы_данных',
@@ -28,10 +29,12 @@ return [
     'password' => 'пароль',
     'charset' => 'utf8',
 ];
+</pre>
 <hr>
 
 5. В файле /web/.htaccess прописать следующее содержимое:
 <hr>
+<pre>
 Options +FollowSymLinks
 IndexIgnore */*
 RewriteEngine on
@@ -42,4 +45,5 @@ RewriteCond %{REQUEST_FILENAME} !-d
 
 # otherwise forward it to index.php
 RewriteRule . index.php
+</pre>
 <hr>
